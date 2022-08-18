@@ -9,37 +9,37 @@ const fileSystem = {
       name: "Documents",
       modified: new Date(),
       size: 1280,
-      children: []
+      children: [],
     },
     {
       type: "folder",
       name: "Images",
       modified: new Date(),
       size: 1280,
-      children: []
+      children: [],
     },
     {
       type: "folder",
       name: "System",
       modified: new Date(),
       size: 1280,
-      children: []
+      children: [],
     },
     {
       type: "file",
       name: "Description.rtf",
       modified: new Date(),
       size: 1280,
-      children: []
+      children: [],
     },
     {
       type: "file",
       name: "Description.txt",
       modified: new Date(),
       size: 1280,
-      children: []
+      children: [],
     },
-  ]
-}
+  ],
+};
 
-console.log('Howdy again, partner.')
+console.log("Howdy again, partner.");

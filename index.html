@@ -1,12 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>File Explorer</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <script src="index.js" defer></script>
   </head>
   <body>
-    Howdy, partner!
+    <main class="window">
+      <section class="window__pane window__pane--left">
+        <div class="folder-tree">
+          <div class="folder-tree__folder">
+            <div class="folder-tree__label">
+              <span class="folder-tree__icon">▾</span>
+              <span class="folder-tree__icon">📁</span>
+              <span>Folder Name</span>
+            </div>
+
+            <div class="folder-tree__folder">
+              <div class="folder-tree__label">
+                <span class="folder-tree__icon">▾</span>
+                <span class="folder-tree__icon">📁</span>
+                <span>Folder Name</span>
+              </div>
+
+              <div class="folder-tree__folder">
+                <div class="folder-tree__label">
+                  <span class="folder-tree__icon">▸</span>
+                  <span class="folder-tree__icon">📁</span>
+                  <span>Folder Name</span>
+                </div>
+              </div>
+
+              <div class="folder-tree__folder">
+                <div class="folder-tree__label">
+                  <span class="folder-tree__icon">▸</span>
+                  <span class="folder-tree__icon">📁</span>
+                  <span>Folder Name</span>
+                </div>
+              </div>
+            </div>
+            <div class="folder-tree__folder">
+              <div class="folder-tree__label">
+                <span class="folder-tree__icon">▸</span>
+                <span class="folder-tree__icon">📁</span>
+                <span>Folder Name</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="window__pane">
+        <div class="folder-contents">
+          <header class="folder-contents__row folder-contents__row--header">
+            <div
+              class="folder-contents__cell folder-contents__cell--icon"
+            ></div>
+            <div class="folder-contents__cell folder-contents__cell--name">
+              Name
+            </div>
+            <div class="folder-contents__cell folder-contents__cell--date">
+              Date Modified
+            </div>
+            <div class="folder-contents__cell folder-contents__cell--size">
+              File Size
+            </div>
+          </header>
+          <div class="folder-contents__row">
+            <div class="folder-contents__cell folder-contents__cell--icon">
+              📁
+            </div>
+            <div class="folder-contents__cell folder-contents__cell--name">
+              Documents
+            </div>
+            <div class="folder-contents__cell folder-contents__cell--date">
+              7/6/2020
+            </div>
+            <div
+              class="folder-contents__cell folder-contents__cell--size"
+            ></div>
+          </div>
+          <div class="folder-contents__row">
+            <div class="folder-contents__cell folder-contents__cell--icon">
+              📄
+            </div>
+            <div class="folder-contents__cell folder-contents__cell--name">
+              Description.rtf
+            </div>
+            <div class="folder-contents__cell folder-contents__cell--date">
+              7/6/2020
+            </div>
+            <div class="folder-contents__cell folder-contents__cell--size">
+              1 KB
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

@@ -23,14 +23,17 @@ body {
   border-right: 1px solid black;
 }
 
-.folder-button {
+.clickable {
   all: unset;
   cursor: pointer;
-  padding: 4px;
 }
 
-.folder-button:hover {
+.clickable:hover {
   background-color: lightgray;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /* Folder Tree Styles */
@@ -63,6 +66,10 @@ body {
   border-bottom: 1px solid black;
 }
 
+.folder-contents__row--header:empty {
+  display: none;
+}
+
 .folder-contents__cell {
   flex: 1;
   padding: 4px 8px;
@@ -82,8 +89,4 @@ body {
 
 .folder-contents__cell--size {
   flex: 2;
-}
-
-.hidden {
-  display: none;
 }

@@ -9,50 +9,22 @@
   <body>
     <main class="window">
       <section class="window__pane window__pane--left">
-        <div class="folder-tree">
-          <div class="folder-tree__folder">
+        <!-- folder tree list -->
+        <div id="folder-tree-list" class="folder-tree">
+          <!-- folder template -->
+          <div id="folder-template" class="folder-tree__folder">
             <div class="folder-tree__label">
               <span class="folder-tree__icon">▾</span>
-              <span class="folder-tree__icon">📁</span>
+              <span class="folder-tree__icon">📂</span>
               <span>Folder Name</span>
-            </div>
-
-            <div class="folder-tree__folder">
-              <div class="folder-tree__label">
-                <span class="folder-tree__icon">▾</span>
-                <span class="folder-tree__icon">📁</span>
-                <span>Folder Name</span>
-              </div>
-
-              <div class="folder-tree__folder">
-                <div class="folder-tree__label">
-                  <span class="folder-tree__icon">▸</span>
-                  <span class="folder-tree__icon">📁</span>
-                  <span>Folder Name</span>
-                </div>
-              </div>
-
-              <div class="folder-tree__folder">
-                <div class="folder-tree__label">
-                  <span class="folder-tree__icon">▸</span>
-                  <span class="folder-tree__icon">📁</span>
-                  <span>Folder Name</span>
-                </div>
-              </div>
-            </div>
-            <div class="folder-tree__folder">
-              <div class="folder-tree__label">
-                <span class="folder-tree__icon">▸</span>
-                <span class="folder-tree__icon">📁</span>
-                <span>Folder Name</span>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section class="window__pane">
-        <div class="folder-contents">
+        <!-- folder contents list -->
+        <div id="folder-contents-list" class="folder-contents">
           <header class="folder-contents__row folder-contents__row--header">
             <div
               class="folder-contents__cell folder-contents__cell--icon"
@@ -67,7 +39,9 @@
               File Size
             </div>
           </header>
-          <div class="folder-contents__row">
+
+          <!-- folder contents item template -->
+          <div id="folder-content-item-template" class="folder-contents__row">
             <div class="folder-contents__cell folder-contents__cell--icon">
               📁
             </div>
@@ -80,20 +54,6 @@
             <div
               class="folder-contents__cell folder-contents__cell--size"
             ></div>
-          </div>
-          <div class="folder-contents__row">
-            <div class="folder-contents__cell folder-contents__cell--icon">
-              📄
-            </div>
-            <div class="folder-contents__cell folder-contents__cell--name">
-              Description.rtf
-            </div>
-            <div class="folder-contents__cell folder-contents__cell--date">
-              7/6/2020
-            </div>
-            <div class="folder-contents__cell folder-contents__cell--size">
-              1 KB
-            </div>
           </div>
         </div>
       </section>

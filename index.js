@@ -9,7 +9,22 @@ const fileSystem = {
       name: "Documents",
       modified: new Date(),
       size: 1280,
-      children: [],
+      children: [
+        {
+          type: "file",
+          name: "Taxes.rtf",
+          modified: new Date(),
+          size: 1280,
+          children: [],
+        },
+        {
+          type: "file",
+          name: "Taxes.txt",
+          modified: new Date(),
+          size: 1280,
+          children: [],
+        },
+      ],
     },
     {
       type: "folder",

@@ -23,6 +23,16 @@ body {
   border-right: 1px solid black;
 }
 
+.folder-button {
+  all: unset;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.folder-button:hover {
+  background-color: lightgray;
+}
+
 /* Folder Tree Styles */
 .folder-tree {
   display: flex;
@@ -30,7 +40,7 @@ body {
 }
 
 .folder-tree__folder {
-  margin: 8px 0 8px 16px;
+  margin: 4px 0 4px 16px;
 }
 
 .folder-tree__label {
@@ -38,8 +48,8 @@ body {
   align-items: center;
 }
 
-.folder-tree__icon {
-  margin-right: 4px;
+.folder-tree__folder--click-target:hover {
+  background-color: lightgray;
 }
 
 /* Folder Content Styles */

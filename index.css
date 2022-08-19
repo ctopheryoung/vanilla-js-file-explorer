@@ -46,8 +46,14 @@ button:hover {
   margin: 4px 0 4px 16px;
 }
 
-.folder-tree__folder .expanded {
-  margin: 4px 0 4px 16px;
+.folder-tree__folder.collapsed .folder-tree__icon--expanded,
+.folder-tree__folder:not(.collapsed) .folder-tree__icon--collapsed,
+.folder-tree__folder.collapsed > .folder-tree__folder {
+  display: none;
+}
+
+.folder-tree__folder.collapsed .folder-tree__icon--collapsed {
+  display: inline;
 }
 
 .folder-tree__label {

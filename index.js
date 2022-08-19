@@ -95,7 +95,8 @@ function createFolderTreeItem(item) {
   $el.innerHTML = `
     <div class="folder-tree__label">
       <button class="folder-tree__button--expand-collapse">
-        <span>▾</span>
+        <span class="folder-tree__icon--expanded">▾</span>
+        <span class="folder-tree__icon--collapsed">▸</span>
       </button>
       <button class="folder-tree__button--folder">
         <span>📂</span>
@@ -135,7 +136,7 @@ function appendFolderTreeItems($folderTreeNode, item) {
     const $el = createFolderTreeItem(item);
 
     $el.querySelector(".folder-tree__button--expand-collapse").onclick = () =>
-      toggleFolderExpanded($el);
+      toggleFolderExpanded($el, item.children);
 
     $el.querySelector(".folder-tree__button--folder").onclick = () =>
       selectFolder(item);
@@ -160,10 +161,7 @@ function selectFolder(folder) {
 }
 
 function toggleFolderExpanded($folderTreeItem) {
-  const $elementsToToggle = $folderTreeItem.querySelectorAll(
-    ".folder-tree__folder"
-  );
-  $elementsToToggle.forEach((child) => child.classList.toggle("hidden"));
+  $folderTreeItem.classList.toggle("collapsed");
 }
 
 // Initial Setup

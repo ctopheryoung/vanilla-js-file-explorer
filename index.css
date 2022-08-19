@@ -23,12 +23,12 @@ body {
   border-right: 1px solid black;
 }
 
-.clickable {
+button {
   all: unset;
   cursor: pointer;
 }
 
-.clickable:hover {
+button:hover {
   background-color: lightgray;
 }
 
@@ -46,13 +46,17 @@ body {
   margin: 4px 0 4px 16px;
 }
 
+.folder-tree__folder .expanded {
+  margin: 4px 0 4px 16px;
+}
+
 .folder-tree__label {
   display: flex;
   align-items: center;
 }
 
-.folder-tree__folder--click-target:hover {
-  background-color: lightgray;
+.folder-tree__button--expand-collapse {
+  padding: 0 4px;
 }
 
 /* Folder Content Styles */

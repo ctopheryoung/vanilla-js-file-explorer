@@ -115,7 +115,9 @@ function createFolderTreeElement(item) {
 }
 
 function createFolderContentsElement(item) {
-  const $el = document.createElement(item.type === "folder" ? "button" : "div");
+  const isFolder = item.type === "folder";
+  const $el = document.createElement(isFolder ? "button" : "div");
+
   $el.className = "folder-contents__row";
   $el.innerHTML = `
     <div class="folder-contents__cell folder-contents__cell--icon">
@@ -132,7 +134,7 @@ function createFolderContentsElement(item) {
     </div>
   `;
 
-  $el.onclick = () => selectFolder(item);
+  if (isFolder) $el.onclick = () => selectFolder(item);
 
   return $el;
 }

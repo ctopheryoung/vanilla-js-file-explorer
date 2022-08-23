@@ -4,6 +4,7 @@
   "description": "Simple UI for exploring a mock file system.",
   "main": "index.js",
   "scripts": {
+    "start": "http-server",
     "test": "jest"
   },
   "repository": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/ctopheryoung/vanilla-js-file-explorer#readme",
   "devDependencies": {
+    "http-server": "^14.1.1",
     "jest": "^28.1.3"
   }
 }

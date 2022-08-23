@@ -19,6 +19,7 @@
   "homepage": "https://github.com/ctopheryoung/vanilla-js-file-explorer#readme",
   "devDependencies": {
     "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
     "http-server": "^14.1.1",
     "jest": "^28.1.3",
     "prettier": "2.7.1"

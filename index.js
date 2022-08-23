@@ -91,7 +91,7 @@ const $folderContents = document.getElementById("folder-contents");
 // DOM Update Functions
 function createFolderTreeElement(item) {
   let $el = document.createElement("div");
-  $el.className = "folder-tree__folder";
+  $el.className = "folder-tree__folder collapsed";
   $el.innerHTML = `
     <div class="folder-tree__label">
       <button class="folder-tree__button--expand-collapse">
@@ -104,6 +104,12 @@ function createFolderTreeElement(item) {
       </button>
     </div>
   `;
+
+  $el.querySelector(".folder-tree__button--expand-collapse").onclick = () =>
+    toggleFolderExpanded($el, item.children);
+
+  $el.querySelector(".folder-tree__button--folder").onclick = () =>
+    selectFolder(item);
 
   return $el;
 }
@@ -131,43 +137,37 @@ function createFolderContentsElement(item) {
   return $el;
 }
 
-function appendFolderTreeItems($folderDomTreeNode, item) {
-  if (item.type === "folder") {
-    const $el = createFolderTreeElement(item);
-
-    $el.querySelector(".folder-tree__button--expand-collapse").onclick = () =>
-      toggleFolderExpanded($el, item.children);
-
-    $el.querySelector(".folder-tree__button--folder").onclick = () =>
-      selectFolder(item);
-
-    $folderDomTreeNode.append($el);
-
-    item.children.forEach((child) => appendFolderTreeItems($el, child));
-  }
-}
-
-function appendFolderContentsItems(folder) {
-  $folderContents.append(...folder.children.map(createFolderContentsElement));
-}
-
-function clearFolderContentsItems() {
+function clearFolderContentsElements() {
   const $elementsToRemove = $folderContents.querySelectorAll(
     ".folder-contents__row:not(.folder-contents__row--header"
   );
   $elementsToRemove.forEach(($element) => $element.remove());
 }
 
+function appendFolderTreeElements($folderDomTreeNode, item) {
+  if (item.type === "file") return;
+
+  const $el = createFolderTreeElement(item);
+  $folderDomTreeNode.append($el);
+  item.children.forEach((child) => appendFolderTreeElements($el, child));
+}
+
+function appendFolderContentsElements(folder) {
+  $folderContents.append(...folder.children.map(createFolderContentsElement));
+}
+
 // Event handlers
 function selectFolder(folder) {
-  clearFolderContentsItems();
-  appendFolderContentsItems(folder);
+  clearFolderContentsElements();
+  appendFolderContentsElements(folder);
 }
 
 function toggleFolderExpanded($folderTreeItem) {
+  console.log($folderTreeItem);
   $folderTreeItem.classList.toggle("collapsed");
 }
 
 // Initial Setup
-appendFolderTreeItems($folderTree, root);
-selectFolder(root);
+appendFolderTreeElements($folderTree, root);
+toggleFolderExpanded($folderTree.querySelector(".folder-tree__folder")); // Expand the root folder
+selectFolder(root); // Select the root folder

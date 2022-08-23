@@ -4,7 +4,7 @@
   "description": "Simple UI for exploring a mock file system.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ctopheryoung/vanilla-js-file-explorer/issues"
   },
-  "homepage": "https://github.com/ctopheryoung/vanilla-js-file-explorer#readme"
+  "homepage": "https://github.com/ctopheryoung/vanilla-js-file-explorer#readme",
+  "devDependencies": {
+    "jest": "^28.1.3"
+  }
 }

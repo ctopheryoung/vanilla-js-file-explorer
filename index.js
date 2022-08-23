@@ -89,7 +89,7 @@ const $folderTree = document.getElementById("folder-tree");
 const $folderContents = document.getElementById("folder-contents");
 
 // DOM Update Functions
-function createFolderTreeItem(item) {
+function createFolderTreeElement(item) {
   let $el = document.createElement("div");
   $el.className = "folder-tree__folder";
   $el.innerHTML = `
@@ -108,7 +108,7 @@ function createFolderTreeItem(item) {
   return $el;
 }
 
-function createFolderContentsItem(item) {
+function createFolderContentsElement(item) {
   const $el = document.createElement(item.type === "folder" ? "button" : "div");
   $el.className = "folder-contents__row";
   $el.innerHTML = `
@@ -133,7 +133,7 @@ function createFolderContentsItem(item) {
 
 function appendFolderTreeItems($folderDomTreeNode, item) {
   if (item.type === "folder") {
-    const $el = createFolderTreeItem(item);
+    const $el = createFolderTreeElement(item);
 
     $el.querySelector(".folder-tree__button--expand-collapse").onclick = () =>
       toggleFolderExpanded($el, item.children);
@@ -148,7 +148,7 @@ function appendFolderTreeItems($folderDomTreeNode, item) {
 }
 
 function appendFolderContentsItems(folder) {
-  $folderContents.append(...folder.children.map(createFolderContentsItem));
+  $folderContents.append(...folder.children.map(createFolderContentsElement));
 }
 
 function clearFolderContentsItems() {

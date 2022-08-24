@@ -148,7 +148,6 @@ function selectFolder(folder) {
 }
 
 function toggleFolderExpanded($folderTreeItem) {
-  console.log($folderTreeItem);
   $folderTreeItem.classList.toggle("collapsed");
 }
 

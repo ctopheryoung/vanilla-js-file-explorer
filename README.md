@@ -6,9 +6,7 @@ This is a frontend web application that provides a simple UI for exploring a moc
 
 The UI features a sidebar with the folder tree containing nested folders that can collapse/expand and a table that displays the contents of the selected folder (files and folders). Clicking a folder from either the folder tree or the folder contents table selects that folder for display.
 
-Some basic unit tests for helper functions are included (instructions to run these tests below).
-
-<!-- TODO: Note on scalability, different data scructures with ID which would allow for highlighting the active folder, and more efficient DOM manipulation, getters/setters, etc. -->
+Some basic unit tests for helper functions are included (instructions to run these tests can be found below).
 
 ## Demo
 
@@ -18,16 +16,18 @@ The Netlify project is pointed at the `main` branch of this repo. Any new commit
 
 ## Build
 
-### Requirements
-
-- [Node.js](https://nodejs.org/) >= 14
-
 ### Clone this repo
 
 ```sh
 $ git clone https://github.com/ctopheryoung/vanilla-js-file-explorer
 $ cd vanilla-js-file-explorer
 ```
+
+_Note: This projects dependencies are development tools only (for linting, formatting, live development server, and testing) and are not necesary to run the application. To run the applicaiton without installing dependencies, simply open `index.html` in a web browser._
+
+### Requirements for installing development tools
+
+- [Node.js](https://nodejs.org/) >= 14
 
 ### Install dependencies
 
@@ -50,4 +50,4 @@ $ npm start
 ```
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.

@@ -113,7 +113,7 @@ function createFolderContentsElement(item) {
       ${formatDate(item.modified)}
     </div>
     <div class="folder-contents__cell folder-contents__cell--size">
-      ${item.size > 0 ? formatSize(item.size) : ""}
+      ${formatSize(item.size)}
     </div>
   `;
 

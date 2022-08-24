@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server",
-    "test": "jest"
+    "test": "node --experimental-vm-modules ./node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ctopheryoung/vanilla-js-file-explorer.git"
   },
   "type": "module",
+  "jest": {
+    "transform": {}
+  },
   "author": "Chris Young",
   "license": "ISC",
   "bugs": {

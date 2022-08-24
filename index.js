@@ -1,71 +1,5 @@
+import data from "./mockData.js";
 import { formatDate, formatSize } from "./helpers.js";
-
-// Mock Data
-const root = {
-  type: "folder",
-  name: "Files",
-  modified: new Date(),
-  size: 0,
-  children: [
-    {
-      type: "folder",
-      name: "Documents",
-      modified: new Date(),
-      size: 0,
-      children: [
-        {
-          type: "folder",
-          name: "Downloads",
-          modified: new Date(),
-          size: 0,
-          children: [],
-        },
-        {
-          type: "file",
-          name: "Taxes.rtf",
-          modified: new Date(),
-          size: 1024,
-          children: [],
-        },
-        {
-          type: "file",
-          name: "Taxes.txt",
-          modified: new Date(),
-          size: 1024,
-          children: [],
-        },
-      ],
-    },
-    {
-      type: "folder",
-      name: "Images",
-      modified: new Date(),
-      size: 0,
-      children: [],
-    },
-    {
-      type: "folder",
-      name: "System",
-      modified: new Date(),
-      size: 0,
-      children: [],
-    },
-    {
-      type: "file",
-      name: "Description.rtf",
-      modified: new Date(),
-      size: 1024,
-      children: [],
-    },
-    {
-      type: "file",
-      name: "Description.txt",
-      modified: new Date(),
-      size: 1024,
-      children: [],
-    },
-  ],
-};
 
 // DOM Node References
 const $folderTree = document.getElementById("folder-tree");
@@ -152,6 +86,6 @@ function toggleFolderExpanded($folderTreeItem) {
 }
 
 // Initial Setup
-appendFolderTreeElements($folderTree, root);
+appendFolderTreeElements($folderTree, data);
 toggleFolderExpanded($folderTree.querySelector(".folder-tree__folder")); // Expand the root folder
-selectFolder(root); // Select the root folder
+selectFolder(data); // Select the root folder

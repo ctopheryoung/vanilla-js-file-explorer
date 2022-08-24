@@ -1,0 +1,65 @@
+export default {
+  type: "folder",
+  name: "Files",
+  modified: new Date(),
+  size: 0,
+  children: [
+    {
+      type: "folder",
+      name: "Documents",
+      modified: new Date(),
+      size: 0,
+      children: [
+        {
+          type: "folder",
+          name: "Downloads",
+          modified: new Date(),
+          size: 0,
+          children: [],
+        },
+        {
+          type: "file",
+          name: "Taxes.rtf",
+          modified: new Date(),
+          size: 1024,
+          children: [],
+        },
+        {
+          type: "file",
+          name: "Taxes.txt",
+          modified: new Date(),
+          size: 1024,
+          children: [],
+        },
+      ],
+    },
+    {
+      type: "folder",
+      name: "Images",
+      modified: new Date(),
+      size: 0,
+      children: [],
+    },
+    {
+      type: "folder",
+      name: "System",
+      modified: new Date(),
+      size: 0,
+      children: [],
+    },
+    {
+      type: "file",
+      name: "Description.rtf",
+      modified: new Date(),
+      size: 1024,
+      children: [],
+    },
+    {
+      type: "file",
+      name: "Description.txt",
+      modified: new Date(),
+      size: 1024,
+      children: [],
+    },
+  ],
+};

@@ -1,5 +1,5 @@
 import data from "./mockData.js";
-import { formatDate, formatSize } from "./helpers.js";
+import { formatDate, formatSize } from "../helpers.js";
 
 // DOM Node References
 const $folderTree = document.getElementById("folder-tree");

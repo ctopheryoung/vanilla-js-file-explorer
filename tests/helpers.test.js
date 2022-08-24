@@ -1,5 +1,4 @@
-import { jest } from "@jest/globals";
-import { formatDate, formatSize } from "./helpers.js";
+import { formatDate, formatSize } from "../js/helpers.js";
 
 describe("formatDate", () => {
   test("formats a date object into the expected format", () => {

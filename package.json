@@ -11,6 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/ctopheryoung/vanilla-js-file-explorer.git"
   },
+  "type": "module",
   "author": "Chris Young",
   "license": "ISC",
   "bugs": {
